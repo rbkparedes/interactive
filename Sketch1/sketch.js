@@ -4,24 +4,22 @@ var headImage;
 var customFont;
 var rammetto;
 
-function preload() {
-  rammetto = loadFont('RammettoOne-Regular.ttf');
-}
 
 function preload() {
   headImage = loadImage('head.png'); 
+  rammetto = loadFont('assests/RammettoOne-Regular.ttf');
 }
 
 
 function setup() {
-  createCanvas(600,600);
-  // textFont(rammetto);
-  textSize(28);
+  createCanvas(windowWidth,windowHeight);
+  textFont(rammetto);
+  textSize(55);
   textAlign(CENTER, CENTER);
-  fill(0); // black text
+  fill(0); 
   noStroke();
 
-  // Now that width/height are defined, we can use them
+
   phrases = [
     { text: "AHHHHHHH", x: 200, y: 100 },
     { text: "LALALALALA", x: 300, y: 160 },
@@ -44,8 +42,8 @@ function setup() {
 
 function draw() {
   background("#FDF6F6");
-  let headWidth = 600;
-  let headHeight = 500;
+  let headWidth = 800;
+  let headHeight = 600;
   let headX = (width - headWidth) / 2;
   let headY = height - headHeight;
   image(headImage, headX, headY, headWidth, headHeight);
@@ -66,5 +64,5 @@ function draw() {
 function mousePressed() {
   if (shownPhrases.length < phrases.length) {
     shownPhrases.push(phrases[shownPhrases.length]);
-  }
+    }
 }
