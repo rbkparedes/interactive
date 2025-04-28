@@ -60,3 +60,10 @@ iframe{
     width: 1400px;
     height: 800px;
 }
+
+#snav{
+    font-family: "Nova Slim", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
