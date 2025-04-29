@@ -20,6 +20,7 @@ body{
   text-align: center;
   font-size: 60px;
   padding-bottom: 25px;
+  color:#A1AF5D;
 }
 
 h2{
@@ -27,7 +28,7 @@ h2{
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    font-size: 20px; 
+    font-size: 25px; 
 }
 
 #pa{
