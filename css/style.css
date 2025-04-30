@@ -72,6 +72,7 @@ iframe{
     text-align: center;
     display: inline;
     z-index: 9999;
+    
 }
 
 nav{
@@ -107,4 +108,9 @@ div{
 
 #prev{
     padding-left: 200px;
+}
+
+script{
+    position: absolute;
+    z-index: 0;
 }
