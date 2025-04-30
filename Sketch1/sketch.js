@@ -7,6 +7,7 @@ var showRedWords = false;
 var allPhrasesExploded = false;
 var flashTimer = 0;
 var showText = true;
+var showEllipse = false;
 
 
 function preload() {
@@ -64,7 +65,7 @@ function draw() {
   image(headImage, headX, headY, headWidth, headHeight);
   
   textAlign(CENTER, CENTER); 
-  textSize(30);
+  textSize(75);
   fill(161,175,93);
   if (showText){
     text('Click on head', width/2, height/2);
@@ -119,6 +120,13 @@ let currentY = lerp(phrase.startY, targetYChaos, easeOut(phrase.progress)) * hei
   text("TAKE ME BACK I DON'T\n NEED TO KNOW", width/2, height/2);
   pop();
 }
+//   if(showEllipse){
+//     push();
+    
+//     fill ("pink");
+//     ellipse(10, width/4, height/2);
+//     pop();
+//   }
 }
 
 function mousePressed() {
@@ -140,6 +148,7 @@ function mousePressed() {
   else{
     flashTimer = 8;
     showRedWords = true;
+    showEllipse = true;
   }
 }
 

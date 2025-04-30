@@ -70,10 +70,13 @@ iframe{
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    display: inline;
+    z-index: 9999;
 }
 
 nav{
     text-decoration: none;
+    
 }
 
 a {
@@ -96,4 +99,12 @@ div{
     justify-content: center;
     margin: auto;
 
+}
+
+#next{
+    padding-left: 60%;
+}
+
+#prev{
+    padding-left: 200px;
 }
