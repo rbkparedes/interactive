@@ -1,3 +1,17 @@
+/*
+  Portions of this sketch were developed with assistance from ChatGPT (OpenAI).
+  AI support was used specifically to:
+  
+    - Prompt: "i want to change the text size of some of these and i cant do it when they're in the array"
+
+  – Prompt: "how do i rotate the phrases in the array, one by one"
+  
+  - Prompt: "all my phrases are in the upper left corner, can you help me debug my code"
+  
+  -Prompt: "how can i make this look more chaotic"
+Final design, direction, and customization by Rebecca Paredes.
+*/
+
 var phrases = [];
 var shownPhrases = [];
 var headImage;
@@ -59,7 +73,7 @@ function draw() {
   background("#FDF6F6"); 
 }
   let headWidth = 900;
-  let headHeight = 600;
+  let headHeight = 700;
   let headX = (width - headWidth) / 2;
   let headY = height - headHeight;
   image(headImage, headX, headY, headWidth, headHeight);
@@ -68,7 +82,7 @@ function draw() {
   textSize(75);
   fill(161,175,93);
   if (showText){
-    text('Click on head', width/2, height/2);
+    text('Click on the head', width/2, height/2);
   }
   
   

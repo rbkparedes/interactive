@@ -79,7 +79,7 @@ function setup() {
     b[i] = new Ball(
       headCenterX + random(-50, 50),   
       headTopY + random(-20, 20),      
-      random(10, 100)                      
+      random(80, 100)                      
     );
   }
  
@@ -226,8 +226,8 @@ class Ball{
   constructor(tempX, tempY, diam){
     this.x = tempX;
     this.y = tempY; 
-    this.xspeed = random(-4, 4);
-    this.yspeed = random(-8, -2); 
+    this.xspeed = random(2, 6);
+    this.yspeed = random(-8, 5); 
     this.d = diam;
     this.c = random(colors);
   }

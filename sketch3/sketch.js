@@ -11,8 +11,8 @@ var imageFiles = ["estickers.png","chilaquil.png","calcetines.png","tecito.png" 
 var clickedCount = 0;
 var showIntroText = true;
 
-let headWidth = 800;
-let headHeight = 600;
+let headWidth = 900;
+let headHeight = 700;
 let headX, headY, headCenterX, headTopY;
 
 
@@ -70,7 +70,7 @@ function setup() {
   image(headImage, headX, headY, headWidth, headHeight);
   if (showIntroText) {
     fill("#A1AF5D");
-    textSize(48);
+    textSize(50);
     textAlign(CENTER, CENTER);
     text("Click on the balls to\n see what's going on", width / 2, height / 2);
     return;}
@@ -103,7 +103,7 @@ class Ball {
   constructor(tempX, tempY, diam) {
     this.x = tempX;
     this.y = tempY;
-    this.xspeed = random(-4, 4);
+    this.xspeed = random(2, 6);
     this.yspeed = random(-8, -2);
     this.d = diam;
     this.c = random(colors);
