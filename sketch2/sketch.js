@@ -1,3 +1,15 @@
+/*
+  Portions of this sketch were developed with assistance from ChatGPT (OpenAI).
+  AI support was used specifically to:
+
+  – Skip the mousePressed interaction and start the sketch in its final state
+    Prompt: "i want this sketch to start from the part where the phrases are jittering and the balls are bouncing everywhere and there is text on top; basically i want to get rid of the beginning/mouse pressed function"
+
+  – Make the balls look like they are bursting out of the head
+    Prompt: "how do i make it look like the balls are coming out of the head"
+Final design, direction, and customization by Rebecca Paredes.
+*/
+
 var phrases = [];
 var shownPhrases = [];
 var headImage;
@@ -13,7 +25,7 @@ var colors = [];
 
 
 function preload() {
-  headImage = loadImage('head.png'); 
+  headImage = loadImage('cabezaabierta2.png'); 
   rammetto = loadFont('assests/RammettoOne-Regular.ttf');
 }
 
@@ -56,9 +68,41 @@ function setup() {
     { text: "IT’S FINE IT’S FINE", startX: 0.5, startY: 0.85, targetX: 0.35, targetY: 0.93, size: 34, angle: -10, progress: 0 }
   ];
   
-  for(i = 0; i< 20; i++){
-    b[i] = new Ball(200, 300, random(10, 100));
+  let headWidth = 900;
+  let headHeight = 700;
+  let headX = (width - headWidth) / 2;
+  let headY = height - headHeight;
+  let headCenterX = headX + headWidth / 2;
+  let headTopY = headY + 120;
+  
+  for (let i = 0; i < 20; i++) {
+    b[i] = new Ball(
+      headCenterX + random(-50, 50),   
+      headTopY + random(-20, 20),      
+      random(10, 100)                      
+    );
   }
+ 
+  
+  showText = false;
+showEllipse = true;
+showRedWords = true;
+
+// Load all phrases into shownPhrases
+for (let i = 0; i < phrases.length; i++) {
+  let p = phrases[i];
+  shownPhrases.push({
+    text: p.text,
+    startX: p.startX,
+    startY: p.startY,
+    targetX: p.targetX,
+    targetY: p.targetY,
+    size: p.size,
+    angle: p.angle,
+    progress: random(0.7, 1) 
+  });
+}
+  
   
 }
 
@@ -69,17 +113,17 @@ function draw() {
   background("#FDF6F6"); 
 }
   let headWidth = 900;
-  let headHeight = 700;
+  let headHeight = 600;
   let headX = (width - headWidth) / 2;
   let headY = height - headHeight;
   image(headImage, headX, headY, headWidth, headHeight);
   
-  textAlign(CENTER, CENTER); 
-  textSize(75);
-  fill(161,175,93);
-  if (showText){
-    text('Click on head', width/2, height/2);
-  }
+  // textAlign(CENTER, CENTER); 
+  // textSize(75);
+  // fill(161,175,93);
+  // if (showText){
+  //   text('Click on head', width/2, height/2);
+  // }
   
   
   allPhrasesExploded = true;
@@ -139,7 +183,7 @@ let currentY = lerp(phrase.startY, targetYChaos, easeOut(phrase.progress)) * hei
   textAlign(CENTER, CENTER); 
   textSize(80);
   textLeading(115);  
-  text("TAKE ME BACK I DON'T\n NEED TO KNOW", width/2, height/2);
+  text("THERE IS NO GOING\n BACK", width/2, height/2);
   pop();
 }
 }
@@ -182,8 +226,8 @@ class Ball{
   constructor(tempX, tempY, diam){
     this.x = tempX;
     this.y = tempY; 
-    this.xspeed = random(-5, 8);
-    this.yspeed = random(-5, 5);
+    this.xspeed = random(-4, 4);
+    this.yspeed = random(-8, -2); 
     this.d = diam;
     this.c = random(colors);
   }
