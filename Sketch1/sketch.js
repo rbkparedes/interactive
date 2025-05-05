@@ -11,7 +11,7 @@ var showEllipse = false;
 
 
 function preload() {
-  headImage = loadImage('head.png'); 
+  headImage = loadImage('cabezaabierta2.png'); 
   rammetto = loadFont('assests/RammettoOne-Regular.ttf');
 }
 
@@ -53,13 +53,13 @@ function setup() {
 }
 
 function draw() {
-  if (flashTimer > 0) {// pure white flash
+  if (flashTimer > 0) {
   flashTimer--;
 } else {
   background("#FDF6F6"); 
 }
   let headWidth = 900;
-  let headHeight = 700;
+  let headHeight = 600;
   let headX = (width - headWidth) / 2;
   let headY = height - headHeight;
   image(headImage, headX, headY, headWidth, headHeight);
