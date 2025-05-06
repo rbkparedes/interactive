@@ -7,11 +7,11 @@ var colors = [];
 var showGIF = true;
 var gifImage;
 var images= [];
-var imageFiles = ["estickers.png","chilaquil.png","calcetines.png","tecito.png" ];
+var imageFiles = ["gatito.png","cherryblossom.png","estickers.png","chilaquil.png","swan.png","calcetines.png","tecito.png","fresas.png","converse.png","iced.png","gatito.png" ];
 var clickedCount = 0;
 var showIntroText = true;
 
-let headWidth = 900;
+let headWidth = 1000;
 let headHeight = 700;
 let headX, headY, headCenterX, headTopY;
 
@@ -34,7 +34,7 @@ function setup() {
 // }, 600);
   setTimeout(() => {
   showIntroText = false;
-}, 3000);
+}, 2000);
   textFont(rammetto);
   textSize(55);
   textAlign(CENTER, CENTER);
@@ -50,7 +50,7 @@ function setup() {
   headCenterX = headX;
   headTopY = headY - headHeight / 2 + 120;
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 25; i++) {
     b[i] = new Ball(
       headCenterX + random(-50, 50),
       headTopY + random(-20, 20),

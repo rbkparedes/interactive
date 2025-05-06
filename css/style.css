@@ -48,6 +48,7 @@ h2{
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    color: #AD1B20;
 }
 
 #hh1{
@@ -72,6 +73,7 @@ iframe{
     text-align: center;
     display: inline;
     z-index: 9999;
+    display: inline;
     
 }
 
@@ -84,6 +86,7 @@ a {
     color: black;
     text-decoration: none;
     font-size: 25px;
+    display: inline;
 }
 
 h3{
@@ -119,4 +122,35 @@ img{
     align-items: center;
     padding-left: 20%;
     width: 1200px;
+}
+
+button{
+    background-color: #FDF6F6;
+    font-family: "Nova Slim", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #AD1B20;
+    border-color: #AD1B20;
+    text-align: center;
+    margin: auto;
+    width: 400px;
+    font-size: 35px;
+    border-style: dotted;
+    display: inline;
+}
+
+#snavb{
+ position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FDF6F6;
+  font-family: "Nova Slim", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: #AD1B20;
+  border: 2px dotted #AD1B20;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 9;
+  display: inline;
 }

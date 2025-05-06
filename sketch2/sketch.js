@@ -68,7 +68,7 @@ function setup() {
     { text: "IT’S FINE IT’S FINE", startX: 0.5, startY: 0.85, targetX: 0.35, targetY: 0.93, size: 34, angle: -10, progress: 0 }
   ];
   
-  let headWidth = 900;
+  let headWidth = 1000;
   let headHeight = 700;
   let headX = (width - headWidth) / 2;
   let headY = height - headHeight;
@@ -112,8 +112,8 @@ function draw() {
 } else {
   background("#FDF6F6"); 
 }
-  let headWidth = 900;
-  let headHeight = 600;
+  let headWidth = 1000;
+  let headHeight = 700;
   let headX = (width - headWidth) / 2;
   let headY = height - headHeight;
   image(headImage, headX, headY, headWidth, headHeight);
@@ -227,7 +227,7 @@ class Ball{
     this.x = tempX;
     this.y = tempY; 
     this.xspeed = random(2, 6);
-    this.yspeed = random(-8, 5); 
+    this.yspeed = random(-8, 4); 
     this.d = diam;
     this.c = random(colors);
   }

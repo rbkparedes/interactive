@@ -72,7 +72,7 @@ function draw() {
 } else {
   background("#FDF6F6"); 
 }
-  let headWidth = 900;
+  let headWidth = 1000;
   let headHeight = 700;
   let headX = (width - headWidth) / 2;
   let headY = height - headHeight;
