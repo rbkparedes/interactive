@@ -153,4 +153,5 @@ button{
   cursor: pointer;
   z-index: 9;
   display: inline;
+  width: 160px;
 }
